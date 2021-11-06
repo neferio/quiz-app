@@ -1,0 +1,69 @@
+.mainBox{
+    color: black;
+    padding: 10px;
+    min-width: 100vh;
+    min-height: 50vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    .innerBox{
+        margin-left:25px;
+    }
+    .heading{
+        justify-content: left;
+        margin-left:10px;
+        display: flex;
+        h2{
+            font-family: monospace;
+            letter-spacing: 2px;
+            font-size: 4vh;
+        }
+    }
+
+    .buttonBox{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 7vh;
+        button{
+            background-color: #7a799f;
+            border: 0px;
+            border-radius: 7px;
+            padding: 22px 47px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            color: white;
+        }
+        button:hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .green{
+            background-color: #23df20;
+        }
+
+        .red{
+            background-color: #ed2280;
+        }
+
+    }
+}
+
+
+.heading{
+    letter-spacing: 1px;
+}
+
+.score{
+    justify-content: center;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.scoreBox{
+    display: flex;
+    justify-content: space-evenly;
+}

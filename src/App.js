@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import Panelbox from './components/Panelbox';
+import { mainReducer, mainInitialState} from './state/mainState';
+import { MainContext } from './state/contextBase';
+import React,{useReducer} from 'react';
 function App() {
+  const [main,dispatch]=useReducer(mainReducer,mainInitialState)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainContext.Provider value={{main,dispatch}}>
+        <Panelbox></Panelbox>
+      </MainContext.Provider>
+       
     </div>
   );
 }
